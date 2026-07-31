@@ -1,4 +1,4 @@
-import type { Company, Wrestler } from './types'
+import type { Company, Wrestler } from './types';
 
 export const companies: Company[] = [
   {
@@ -25,7 +25,7 @@ export const companies: Company[] = [
     accent: '#16b36c',
     rosterSourceUrl: 'https://www.wwe.com/shows/aaa',
   },
-]
+];
 
 export const wrestlers: Wrestler[] = [
   {
@@ -38,9 +38,17 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '5 ft 7 in',
     signatureMove: 'Riptide',
     bio: 'An ultra-aggressive powerhouse whose rise through NXT UK and NXT made her one of WWE’s defining modern stars.',
-    imageUrl: 'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/04/Rhea_04242026ca_037_Profile.png',
+    imageUrl:
+      'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/04/Rhea_04242026ca_037_Profile.png',
     profileSourceUrl: 'https://www.wwe.com/superstars/rhea-ripley',
-    lastMatch: { date: '2026-07-18', event: 'Saturday Night’s Main Event', opponent: 'Jade Cargill', outcome: 'win', method: 'Pinfall', sourceUrl: 'https://www.wwe.com/superstars/rhea-ripley' },
+    lastMatch: {
+      date: '2026-07-18',
+      event: 'Saturday Night’s Main Event',
+      opponent: 'Jade Cargill',
+      outcome: 'win',
+      method: 'Pinfall',
+      sourceUrl: 'https://www.wwe.com/superstars/rhea-ripley',
+    },
     currentRating: { average: 4.8, voteCount: 482, minimumVotes: 3 },
     ratingHistory: [
       { season: 2025, average: 4.6, voteCount: 1240, closedAt: '2025-04-19' },
@@ -58,9 +66,17 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '6 ft 2 in',
     signatureMove: 'Cross Rhodes',
     bio: 'The son of Dusty Rhodes reinvented himself around the world before returning to WWE and finishing his story on its biggest stage.',
-    imageUrl: 'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/06/CODY_RHODES_PROFILE.png',
+    imageUrl:
+      'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/06/CODY_RHODES_PROFILE.png',
     profileSourceUrl: 'https://www.wwe.com/superstars/cody-rhodes',
-    lastMatch: { date: '2026-07-24', event: 'SmackDown', opponent: 'Randy Orton', outcome: 'win', method: 'Pinfall', sourceUrl: 'https://www.wwe.com/superstars/cody-rhodes' },
+    lastMatch: {
+      date: '2026-07-24',
+      event: 'SmackDown',
+      opponent: 'Randy Orton',
+      outcome: 'win',
+      method: 'Pinfall',
+      sourceUrl: 'https://www.wwe.com/superstars/cody-rhodes',
+    },
     currentRating: { average: 4.5, voteCount: 391, minimumVotes: 3 },
     ratingHistory: [
       { season: 2025, average: 4.7, voteCount: 1612, closedAt: '2025-04-19' },
@@ -78,9 +94,18 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '5 ft 11 in',
     signatureMove: 'Penta Driver',
     bio: 'A globally recognized luchador known for fearless offense, championship success across promotions, and his unmistakable Cero Miedo salute.',
-    imageUrl: 'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/03/Penta_03232026MM_22590_PROFILE.png',
+    imageUrl:
+      'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/03/Penta_03232026MM_22590_PROFILE.png',
     profileSourceUrl: 'https://www.wwe.com/superstars/penta',
-    lastMatch: { date: '2026-07-20', event: 'Monday Night Raw', opponent: 'Ethan Page & Rusev', outcome: 'win', method: 'Tag-team pinfall', sourceUrl: 'https://www.wwe.com/videos/penta-chad-gable-vs-ethan-page-rusev-raw-highlights-july-20-2026' },
+    lastMatch: {
+      date: '2026-07-20',
+      event: 'Monday Night Raw',
+      opponent: 'Ethan Page & Rusev',
+      outcome: 'win',
+      method: 'Tag-team pinfall',
+      sourceUrl:
+        'https://www.wwe.com/videos/penta-chad-gable-vs-ethan-page-rusev-raw-highlights-july-20-2026',
+    },
     currentRating: { average: null, voteCount: 2, minimumVotes: 3 },
     ratingHistory: [{ season: 2025, average: 4.4, voteCount: 603, closedAt: '2025-04-19' }],
   },
@@ -94,9 +119,17 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '6 ft 0 in',
     signatureMove: 'One-Winged Angel',
     bio: 'A decorated world champion whose explosive athleticism and epic main events helped define AEW from its earliest days.',
-    imageUrl: 'https://static.wixstatic.com/media/815952_b1d3229b8dd14a8aa451dc2a81313671~mv2.jpg/v1/fill/w_600,h_720,al_c,q_85/kenny-omega.jpg',
+    imageUrl:
+      'https://static.wixstatic.com/media/815952_b1d3229b8dd14a8aa451dc2a81313671~mv2.jpg/v1/fill/w_600,h_720,al_c,q_85/kenny-omega.jpg',
     profileSourceUrl: 'https://www.allelitewrestling.com/aew-roster',
-    lastMatch: { date: '2026-07-22', event: 'AEW Dynamite', opponent: 'Kazuchika Okada', outcome: 'win', method: 'Pinfall', sourceUrl: 'https://www.allelitewrestling.com/aew-roster' },
+    lastMatch: {
+      date: '2026-07-22',
+      event: 'AEW Dynamite',
+      opponent: 'Kazuchika Okada',
+      outcome: 'win',
+      method: 'Pinfall',
+      sourceUrl: 'https://www.allelitewrestling.com/aew-roster',
+    },
     currentRating: { average: 4.9, voteCount: 724, minimumVotes: 3 },
     ratingHistory: [
       { season: 2025, average: 4.6, voteCount: 902, closedAt: '2025-04-19' },
@@ -114,9 +147,17 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '5 ft 5 in',
     signatureMove: 'Moné Maker',
     bio: 'A globe-trotting champion with elite confidence, technical precision, and a collection of titles that keeps growing.',
-    imageUrl: 'https://static.wixstatic.com/media/815952_3201259605fe41fd9271576455575bd1~mv2.jpg/v1/fill/w_600,h_720,al_c,q_85/mercedes-mone.jpg',
+    imageUrl:
+      'https://static.wixstatic.com/media/815952_3201259605fe41fd9271576455575bd1~mv2.jpg/v1/fill/w_600,h_720,al_c,q_85/mercedes-mone.jpg',
     profileSourceUrl: 'https://www.allelitewrestling.com/aew-roster',
-    lastMatch: { date: '2026-07-18', event: 'AEW Collision', opponent: 'Toni Storm', outcome: 'loss', method: 'Pinfall', sourceUrl: 'https://www.allelitewrestling.com/aew-roster' },
+    lastMatch: {
+      date: '2026-07-18',
+      event: 'AEW Collision',
+      opponent: 'Toni Storm',
+      outcome: 'loss',
+      method: 'Pinfall',
+      sourceUrl: 'https://www.allelitewrestling.com/aew-roster',
+    },
     currentRating: { average: 4.2, voteCount: 318, minimumVotes: 3 },
     ratingHistory: [{ season: 2025, average: 4.1, voteCount: 541, closedAt: '2025-04-19' }],
   },
@@ -130,9 +171,17 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '6 ft 1 in',
     signatureMove: 'Hidden Blade',
     bio: 'A breathtaking high flyer who evolved into a complete heavyweight and remains one of the most acclaimed wrestlers of his generation.',
-    imageUrl: 'https://static.wixstatic.com/media/815952_e5acc36821e4423cb463b29b289d55d8~mv2.jpg/v1/fill/w_600,h_720,al_c,q_85/will-ospreay.jpg',
+    imageUrl:
+      'https://static.wixstatic.com/media/815952_e5acc36821e4423cb463b29b289d55d8~mv2.jpg/v1/fill/w_600,h_720,al_c,q_85/will-ospreay.jpg',
     profileSourceUrl: 'https://www.allelitewrestling.com/aew-roster',
-    lastMatch: { date: '2026-07-15', event: 'AEW Dynamite', opponent: 'Konosuke Takeshita', outcome: 'win', method: 'Pinfall', sourceUrl: 'https://www.allelitewrestling.com/aew-roster' },
+    lastMatch: {
+      date: '2026-07-15',
+      event: 'AEW Dynamite',
+      opponent: 'Konosuke Takeshita',
+      outcome: 'win',
+      method: 'Pinfall',
+      sourceUrl: 'https://www.allelitewrestling.com/aew-roster',
+    },
     currentRating: { average: 4.7, voteCount: 609, minimumVotes: 3 },
     ratingHistory: [{ season: 2025, average: 4.8, voteCount: 1112, closedAt: '2025-04-19' }],
   },
@@ -148,7 +197,15 @@ export const wrestlers: Wrestler[] = [
     bio: 'One of AAA’s most popular masked stars, beloved for his wild charisma and a legendary Triplemanía mask victory over Dr. Wagner Jr.',
     imageUrl: 'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/06/Psycho_Clown_PRO.png',
     profileSourceUrl: 'https://www.wwe.com/superstars/psycho-clown',
-    lastMatch: { date: '2026-06-27', event: 'AAA Lucha Libre', opponent: 'Pagano', outcome: 'draw', method: 'No contest', sourceUrl: 'https://www.wwe.com/videos/psycho-circus-discover-pagano-after-a-mysterious-attack-aaa-lucha-libre-highlights-june-27' },
+    lastMatch: {
+      date: '2026-06-27',
+      event: 'AAA Lucha Libre',
+      opponent: 'Pagano',
+      outcome: 'draw',
+      method: 'No contest',
+      sourceUrl:
+        'https://www.wwe.com/videos/psycho-circus-discover-pagano-after-a-mysterious-attack-aaa-lucha-libre-highlights-june-27',
+    },
     currentRating: { average: 4.6, voteCount: 284, minimumVotes: 3 },
     ratingHistory: [
       { season: 2025, average: 4.4, voteCount: 477, closedAt: '2025-04-19' },
@@ -168,7 +225,14 @@ export const wrestlers: Wrestler[] = [
     bio: 'A second-generation luchadora who pairs an aggressive technical style with the ruthless attitude of Las Tóxicas.',
     imageUrl: 'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/03/hiedra_PROFILE.png',
     profileSourceUrl: 'https://www.wwe.com/superstars/la-hiedra',
-    lastMatch: { date: '2026-07-11', event: 'AAA Verano de Escándalo', opponent: 'Lola Vice', outcome: 'loss', method: 'Submission', sourceUrl: 'https://www.wwe.com/superstars/la-hiedra' },
+    lastMatch: {
+      date: '2026-07-11',
+      event: 'AAA Verano de Escándalo',
+      opponent: 'Lola Vice',
+      outcome: 'loss',
+      method: 'Submission',
+      sourceUrl: 'https://www.wwe.com/superstars/la-hiedra',
+    },
     currentRating: { average: null, voteCount: 2, minimumVotes: 3 },
     ratingHistory: [{ season: 2025, average: 3.9, voteCount: 188, closedAt: '2025-04-19' }],
   },
@@ -182,12 +246,23 @@ export const wrestlers: Wrestler[] = [
     billedHeight: '5 ft 8 in',
     signatureMove: 'Chalino Driver',
     bio: 'An unpredictable fan favorite whose humor, creativity, and inseparable companion La Yezka have made him an international sensation.',
-    imageUrl: 'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/03/mr_Iguana_PROFILE.png',
+    imageUrl:
+      'https://www.wwe.com/f/styles/talent_champion_xl/public/2026/03/mr_Iguana_PROFILE.png',
     profileSourceUrl: 'https://www.wwe.com/superstars/mr-iguana',
-    lastMatch: { date: '2026-07-11', event: 'AAA Verano de Escándalo', opponent: 'Money Machine', outcome: 'win', method: 'Tag-team pinfall', sourceUrl: 'https://www.wwe.com/videos/mr-iguana-la-parka-beat-money-machine-and-dinamico-drago-lucha-libre-aaa-highlights' },
+    lastMatch: {
+      date: '2026-07-11',
+      event: 'AAA Verano de Escándalo',
+      opponent: 'Money Machine',
+      outcome: 'win',
+      method: 'Tag-team pinfall',
+      sourceUrl:
+        'https://www.wwe.com/videos/mr-iguana-la-parka-beat-money-machine-and-dinamico-drago-lucha-libre-aaa-highlights',
+    },
     currentRating: { average: 4.7, voteCount: 356, minimumVotes: 3 },
     ratingHistory: [{ season: 2025, average: 4.2, voteCount: 219, closedAt: '2025-04-19' }],
   },
-]
+];
 
-export const companyById = Object.fromEntries(companies.map((company) => [company.id, company])) as Record<Company['id'], Company>
+export const companyById = Object.fromEntries(
+  companies.map((company) => [company.id, company]),
+) as Record<Company['id'], Company>;

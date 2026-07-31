@@ -15,7 +15,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
+````js
 export default defineConfig([
   # WrestleMeter
 
@@ -30,33 +30,33 @@ export default defineConfig([
   ```bash
   npm install
   npm run dev
-  ```
+````
 
-  Production checks:
+Production checks:
 
-  ```bash
-  npm run build
-  npm run lint
-  ```
+```bash
+npm run build
+npm run lint
+```
 
-  ## Current experience
+## Current experience
 
-  - Responsive home, roster, and wrestler profile routes
-  - WWE, AEW, and AAA filters
-  - Global wrestler and promotion search
-  - English, Spanish, and French UI with browser-locale detection and a persistent language selector
-  - Current score, vote threshold, recent result, and annual history
-  - Ratings hidden until three votes exist
-  - Demo sign-in and one local vote per mounted profile
-  - Typed source URLs and explicit labels for illustrative prototype data
+- Responsive home, roster, and wrestler profile routes
+- WWE, AEW, and AAA filters
+- Global wrestler and promotion search
+- English, Spanish, and French UI with browser-locale detection and a persistent language selector
+- Current score, vote threshold, recent result, and annual history
+- Ratings hidden until three votes exist
+- Demo sign-in and one local vote per mounted profile
+- Typed source URLs and explicit labels for illustrative prototype data
 
-  Authentication and vote enforcement are not production-ready yet. The planned architecture and phased work are documented in [private implementation plan](private implementation plan).
+Authentication and vote enforcement are not production-ready yet. The planned architecture and phased work are documented in [private implementation plan](private implementation plan).
 
-  ## Stack
+## Stack
 
-  - React 19 and TypeScript 6
-  - Vite 8
-  - React Router 7
-  - Lucide icons
-  - Supabase planned for Postgres, Auth, Row Level Security, and scheduled season rollover
-      // Other configs...
+- React 19 and TypeScript 6
+- Vite 8
+- React Router 7
+- Lucide icons
+- Supabase planned for Postgres, Auth, Row Level Security, and scheduled season rollover
+  // Other configs...
