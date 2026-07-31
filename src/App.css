@@ -297,9 +297,11 @@ p {
 }
 html[lang='es'] .hero-section h1 {
   font-size: clamp(72px, 7.5vw, 108px);
+  line-height: 0.86;
 }
 html[lang='fr'] .hero-section h1 {
   font-size: clamp(76px, 8.5vw, 122px);
+  line-height: 0.86;
 }
 .hero-section__content > div:first-child > p {
   max-width: 510px;
