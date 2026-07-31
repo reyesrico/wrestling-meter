@@ -21,6 +21,8 @@ export default defineConfig([
 
   WrestleMeter is a fan scorecard for professional wrestling. Visitors can browse WWE, AEW, and AAA talent, inspect recent match context, and see annual fan ratings expressed as one to five luchador masks. Browsing is public; voting will require an account.
 
+  Live site: https://reyesrico.github.io/wrestling-meter/
+
   The current application is a frontend prototype. It uses typed mock records, remote official profile images, local demo authentication, and session-only voting so the complete product flow can be evaluated before database work begins.
 
   ## Run locally
