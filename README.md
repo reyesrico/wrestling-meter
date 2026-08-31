@@ -35,8 +35,7 @@ npm run lint
 - Demo sign-in and one local vote per mounted profile
 - Typed source URLs and explicit labels for illustrative prototype data
 
-Authentication and vote enforcement are not production-ready yet. The planned architecture and
-phased work are documented in [private implementation plan](private implementation plan).
+Authentication and vote enforcement are not production-ready yet.
 
 ## Stack
 
