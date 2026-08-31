@@ -1,7 +1,6 @@
 import type { CompanyId, Wrestler } from '../data/types';
 
-const apiBaseUrl =
-  import.meta.env.VITE_API_BASE_URL ?? 'https://example.invalid/api';
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export interface PublicRating {
   average: number | null;
