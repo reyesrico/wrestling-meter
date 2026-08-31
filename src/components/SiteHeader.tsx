@@ -60,7 +60,11 @@ export function SiteHeader({ signedIn, onSearch, onSignIn, onSignOut }: SiteHead
         <button className="icon-button" onClick={onSearch} aria-label={t('header.search')}>
           <Search />
         </button>
-        <button className="login-button" onClick={signedIn ? onSignOut : onSignIn}>
+        <button
+          className="login-button"
+          onClick={signedIn ? onSignOut : onSignIn}
+          aria-label={t(signedIn ? 'header.account' : 'header.signIn')}
+        >
           {signedIn ? (
             <>
               <UserRound size={17} />

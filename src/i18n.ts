@@ -66,8 +66,8 @@ const resources = {
         promotions: 'WWE · AEW · AAA',
         title: 'THE ROSTER',
         intro: 'Browse the names shaping wrestling right now.',
-        count_one: '{{count}} wrestler in this prototype',
-        count_other: '{{count}} wrestlers in this prototype',
+        count_one: '{{count}} wrestler',
+        count_other: '{{count}} wrestlers',
         sort: {
           label: 'Sort by',
           'meter-desc': 'Meter: high to low',
@@ -99,12 +99,14 @@ const resources = {
         masks_other: '{{count}} out of 5 masks',
         maskTitle_one: '{{count}} mask',
         maskTitle_other: '{{count}} masks',
-        voteSaved: 'Your {{count}}-mask demo vote is saved for this session.',
+        voteSaved: 'Your {{count}}-mask vote is saved.',
+        voteSaving: 'Saving your vote…',
+        voteError: 'Your vote could not be saved. Please try again.',
         choose: 'Choose carefully. One vote per fan, per season.',
         signInToVote: 'Sign in to cast one secure vote per season.',
-        prototype: 'Prototype data',
+        prototype: 'Source note',
         prototypeCopy:
-          'Ratings and match records are illustrative. Profile facts link to their source.',
+          'Roster and profile facts link to their source. Ratings come from WrestleMeter fans.',
         outcomes: { win: 'win', loss: 'loss', draw: 'draw' },
         methods: {
           pinfall: 'Pinfall',
@@ -118,10 +120,9 @@ const resources = {
         eyebrow: 'Join the crowd',
         title: 'Make your vote count',
         intro: 'Sign in to cast one rating per wrestler in each WrestleMania season.',
-        email: 'Email',
-        continue: 'Continue with email',
-        security:
-          'Production auth will use Supabase sessions and row-level security. This prototype accepts any valid email locally.',
+        continue: 'Continue securely',
+        unavailable: 'Sign in unavailable',
+        security: 'Sign-in is protected by Auth0. WrestleMeter never stores your password.',
       },
       notFound: {
         title: 'OUTSIDE THE RING',
@@ -182,8 +183,8 @@ const resources = {
         promotions: 'WWE · AEW · AAA',
         title: 'EL PLANTEL',
         intro: 'Descubre los nombres que están dando forma a la lucha libre actual.',
-        count_one: '{{count}} luchador en este prototipo',
-        count_other: '{{count}} luchadores en este prototipo',
+        count_one: '{{count}} luchador',
+        count_other: '{{count}} luchadores',
         sort: {
           label: 'Ordenar por',
           'meter-desc': 'Medidor: mayor a menor',
@@ -215,12 +216,14 @@ const resources = {
         masks_other: '{{count}} de 5 máscaras',
         maskTitle_one: '{{count}} máscara',
         maskTitle_other: '{{count}} máscaras',
-        voteSaved: 'Tu voto de {{count}} máscaras se guardó para esta sesión.',
+        voteSaved: 'Tu voto de {{count}} máscaras se guardó.',
+        voteSaving: 'Guardando tu voto…',
+        voteError: 'No se pudo guardar tu voto. Inténtalo de nuevo.',
         choose: 'Elige con cuidado. Un voto por fan y temporada.',
         signInToVote: 'Inicia sesión para emitir un voto seguro por temporada.',
-        prototype: 'Datos de prototipo',
+        prototype: 'Nota de fuentes',
         prototypeCopy:
-          'Las calificaciones y los combates son ilustrativos. Los datos del perfil enlazan a su fuente.',
+          'El plantel y los datos del perfil enlazan a su fuente. Las calificaciones son de los fans de WrestleMeter.',
         outcomes: { win: 'victoria', loss: 'derrota', draw: 'empate' },
         methods: {
           pinfall: 'Cuenta de tres',
@@ -264,10 +267,9 @@ const resources = {
         title: 'Haz que tu voto cuente',
         intro:
           'Inicia sesión para dar una calificación por luchador en cada temporada de WrestleMania.',
-        email: 'Correo electrónico',
-        continue: 'Continuar con correo',
-        security:
-          'La autenticación de producción usará sesiones de Supabase y seguridad a nivel de fila. Este prototipo acepta localmente cualquier correo válido.',
+        continue: 'Continuar de forma segura',
+        unavailable: 'Inicio de sesión no disponible',
+        security: 'Auth0 protege el acceso. WrestleMeter nunca guarda tu contraseña.',
       },
       notFound: {
         title: 'FUERA DEL RING',
@@ -328,8 +330,8 @@ const resources = {
         promotions: 'WWE · AEW · AAA',
         title: 'LE ROSTER',
         intro: 'Découvrez les noms qui façonnent le catch aujourd’hui.',
-        count_one: '{{count}} catcheur dans ce prototype',
-        count_other: '{{count}} catcheurs dans ce prototype',
+        count_one: '{{count}} catcheur',
+        count_other: '{{count}} catcheurs',
         sort: {
           label: 'Trier par',
           'meter-desc': 'Classement : décroissant',
@@ -361,12 +363,14 @@ const resources = {
         masks_other: '{{count}} masques sur 5',
         maskTitle_one: '{{count}} masque',
         maskTitle_other: '{{count}} masques',
-        voteSaved: 'Votre vote de {{count}} masques est enregistré pour cette session.',
+        voteSaved: 'Votre vote de {{count}} masques est enregistré.',
+        voteSaving: 'Enregistrement de votre vote…',
+        voteError: 'Votre vote n’a pas pu être enregistré. Veuillez réessayer.',
         choose: 'Choisissez bien. Un vote par fan et par saison.',
         signInToVote: 'Connectez-vous pour voter une fois par saison.',
-        prototype: 'Données de prototype',
+        prototype: 'Note sur les sources',
         prototypeCopy:
-          'Les notes et résultats sont illustratifs. Les informations de profil renvoient à leur source.',
+          'Le roster et les profils renvoient à leur source. Les notes viennent des fans de WrestleMeter.',
         outcomes: { win: 'victoire', loss: 'défaite', draw: 'nul' },
         methods: {
           pinfall: 'Tombé',
@@ -410,10 +414,9 @@ const resources = {
         title: 'Faites compter votre vote',
         intro:
           'Connectez-vous pour attribuer une note par catcheur à chaque saison de WrestleMania.',
-        email: 'E-mail',
-        continue: 'Continuer par e-mail',
-        security:
-          'L’authentification de production utilisera les sessions Supabase et la sécurité au niveau des lignes. Ce prototype accepte localement toute adresse e-mail valide.',
+        continue: 'Continuer en toute sécurité',
+        unavailable: 'Connexion indisponible',
+        security: 'Auth0 protège la connexion. WrestleMeter ne stocke jamais votre mot de passe.',
       },
       notFound: {
         title: 'HORS DU RING',

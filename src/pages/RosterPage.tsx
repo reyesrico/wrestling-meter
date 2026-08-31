@@ -1,15 +1,29 @@
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router';
+import { getCatalogWrestlers } from '../api/client';
 import { CompanyFilters } from '../components/CompanyFilters';
 import { RosterSort } from '../components/RosterSort';
 import { rosterSorts, type RosterSortValue } from '../components/rosterSortOptions';
 import { WrestlerCard } from '../components/WrestlerCard';
 import { companies, wrestlers } from '../data/mock';
-import type { CompanyId } from '../data/types';
+import type { CompanyId, Wrestler } from '../data/types';
 
 export function RosterPage() {
   const { t, i18n } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
+  const [catalogWrestlers, setCatalogWrestlers] = useState<Wrestler[]>(wrestlers);
+  useEffect(() => {
+    let active = true;
+    void getCatalogWrestlers()
+      .then((catalog) => {
+        if (active) setCatalogWrestlers(catalog);
+      })
+      .catch(() => undefined);
+    return () => {
+      active = false;
+    };
+  }, []);
   const requested = searchParams.get('company') as CompanyId | null;
   const requestedSort = searchParams.get('sort') as RosterSortValue | null;
   const active: CompanyId | 'all' = companies.some((company) => company.id === requested)
@@ -20,7 +34,11 @@ export function RosterPage() {
     : 'meter-desc';
   const collator = new Intl.Collator(i18n.resolvedLanguage, { sensitivity: 'base' });
   const visible = (
-    active === 'all' ? wrestlers : wrestlers.filter((wrestler) => wrestler.companyId === active)
+    active === 'all'
+      ? catalogWrestlers
+      : catalogWrestlers.filter((wrestler) =>
+          (wrestler.companyIds ?? [wrestler.companyId]).includes(active),
+        )
   ).toSorted((first, second) => {
     if (sort.startsWith('name'))
       return collator.compare(first.name, second.name) * (sort === 'name-asc' ? 1 : -1);
@@ -59,7 +77,12 @@ export function RosterPage() {
       <div className="roster-count">{t('roster.count', { count: visible.length })}</div>
       <div className="card-grid card-grid--roster">
         {visible.map((wrestler, index) => (
-          <WrestlerCard key={wrestler.id} wrestler={wrestler} index={index} />
+          <WrestlerCard
+            key={wrestler.id}
+            wrestler={wrestler}
+            index={index}
+            companyId={active === 'all' ? undefined : active}
+          />
         ))}
       </div>
     </main>

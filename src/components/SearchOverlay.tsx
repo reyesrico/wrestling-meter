@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronRight, Search, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
+import { getCatalogWrestlers } from '../api/client';
 import { companyById, wrestlers } from '../data/mock';
+import type { Wrestler } from '../data/types';
 
 interface SearchOverlayProps {
   onClose: () => void;
@@ -12,8 +14,20 @@ export function SearchOverlay({ onClose }: SearchOverlayProps) {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
+  const [catalogWrestlers, setCatalogWrestlers] = useState<Wrestler[]>(wrestlers);
+  useEffect(() => {
+    let active = true;
+    void getCatalogWrestlers()
+      .then((catalog) => {
+        if (active) setCatalogWrestlers(catalog);
+      })
+      .catch(() => undefined);
+    return () => {
+      active = false;
+    };
+  }, []);
   const matches = query.trim()
-    ? wrestlers
+    ? catalogWrestlers
         .filter((wrestler) =>
           `${wrestler.name} ${wrestler.nickname} ${companyById[wrestler.companyId].shortName}`
             .toLowerCase()

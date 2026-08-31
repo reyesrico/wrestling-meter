@@ -16,6 +16,7 @@ export interface MatchResult {
   outcome: 'win' | 'loss' | 'draw';
   method: string;
   sourceUrl: string;
+  verified?: boolean;
 }
 
 export interface RatingSummary {
@@ -37,6 +38,7 @@ export interface Wrestler {
   name: string;
   nickname: string;
   companyId: CompanyId;
+  companyIds?: CompanyId[];
   hometown: string;
   billedHeight: string;
   signatureMove: string;

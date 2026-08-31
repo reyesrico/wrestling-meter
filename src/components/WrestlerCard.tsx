@@ -2,22 +2,23 @@ import type { CSSProperties } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { companyById } from '../data/mock';
-import type { Wrestler } from '../data/types';
+import type { CompanyId, Wrestler } from '../data/types';
 import { Rating } from './Rating';
 
 interface WrestlerCardProps {
   wrestler: Wrestler;
   index?: number;
+  companyId?: CompanyId;
 }
 
-export function WrestlerCard({ wrestler, index = 0 }: WrestlerCardProps) {
+export function WrestlerCard({ wrestler, index = 0, companyId }: WrestlerCardProps) {
   const { t } = useTranslation();
-  const company = companyById[wrestler.companyId];
+  const company = companyById[companyId ?? wrestler.companyId];
 
   return (
     <Link
       className="wrestler-card"
-      style={{ '--delay': `${index * 55}ms` } as CSSProperties}
+      style={{ '--delay': `${Math.min(index, 12) * 55}ms` } as CSSProperties}
       to={`/wrestlers/${wrestler.slug}`}
     >
       <div className="wrestler-card__image">
@@ -30,14 +31,16 @@ export function WrestlerCard({ wrestler, index = 0 }: WrestlerCardProps) {
         <span className="eyebrow">{wrestler.nickname}</span>
         <h3>{wrestler.name}</h3>
         <Rating wrestler={wrestler} compact />
-        <div className="last-result">
-          <span className={`result result--${wrestler.lastMatch.outcome}`}>
-            {wrestler.lastMatch.outcome[0].toUpperCase()}
-          </span>
-          <span>
-            {t('profile.versus')} {wrestler.lastMatch.opponent}
-          </span>
-        </div>
+        {wrestler.lastMatch.verified !== false && (
+          <div className="last-result">
+            <span className={`result result--${wrestler.lastMatch.outcome}`}>
+              {wrestler.lastMatch.outcome[0].toUpperCase()}
+            </span>
+            <span>
+              {t('profile.versus')} {wrestler.lastMatch.opponent}
+            </span>
+          </div>
+        )}
       </div>
     </Link>
   );
