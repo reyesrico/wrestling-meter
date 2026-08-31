@@ -66,6 +66,7 @@ const resources = {
         promotions: 'WWE · AEW · AAA',
         title: 'THE ROSTER',
         intro: 'Browse the names shaping wrestling right now.',
+        loading: 'Loading roster…',
         count_one: '{{count}} wrestler',
         count_other: '{{count}} wrestlers',
         sort: {
@@ -183,6 +184,7 @@ const resources = {
         promotions: 'WWE · AEW · AAA',
         title: 'EL PLANTEL',
         intro: 'Descubre los nombres que están dando forma a la lucha libre actual.',
+        loading: 'Cargando plantel…',
         count_one: '{{count}} luchador',
         count_other: '{{count}} luchadores',
         sort: {
@@ -330,6 +332,7 @@ const resources = {
         promotions: 'WWE · AEW · AAA',
         title: 'LE ROSTER',
         intro: 'Découvrez les noms qui façonnent le catch aujourd’hui.',
+        loading: 'Chargement du roster…',
         count_one: '{{count}} catcheur',
         count_other: '{{count}} catcheurs',
         sort: {

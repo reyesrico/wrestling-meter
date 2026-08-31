@@ -12,14 +12,16 @@ import type { CompanyId, Wrestler } from '../data/types';
 export function RosterPage() {
   const { t, i18n } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
-  const [catalogWrestlers, setCatalogWrestlers] = useState<Wrestler[]>(wrestlers);
+  const [catalogWrestlers, setCatalogWrestlers] = useState<Wrestler[] | null>(null);
   useEffect(() => {
     let active = true;
     void getCatalogWrestlers()
       .then((catalog) => {
         if (active) setCatalogWrestlers(catalog);
       })
-      .catch(() => undefined);
+      .catch(() => {
+        if (active) setCatalogWrestlers(wrestlers);
+      });
     return () => {
       active = false;
     };
@@ -34,8 +36,8 @@ export function RosterPage() {
     : 'meter-desc';
   const collator = new Intl.Collator(i18n.resolvedLanguage, { sensitivity: 'base' });
   const visible = (
-    active === 'all'
-      ? catalogWrestlers
+    active === 'all' || catalogWrestlers === null
+      ? (catalogWrestlers ?? [])
       : catalogWrestlers.filter((wrestler) =>
           (wrestler.companyIds ?? [wrestler.companyId]).includes(active),
         )
@@ -74,7 +76,11 @@ export function RosterPage() {
         <CompanyFilters active={active} onChange={changeCompany} />
         <RosterSort value={sort} onChange={changeSort} />
       </div>
-      <div className="roster-count">{t('roster.count', { count: visible.length })}</div>
+      <div className="roster-count" aria-live="polite">
+        {catalogWrestlers === null
+          ? t('roster.loading')
+          : t('roster.count', { count: visible.length })}
+      </div>
       <div className="card-grid card-grid--roster">
         {visible.map((wrestler, index) => (
           <WrestlerCard
